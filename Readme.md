@@ -8,17 +8,21 @@ Mooned is a simple editor using GTK+3.
 
 ### Requirements
 
-1. Linux operating system
+1. Linux operating system (Gnome desktop environment)
 2. gcc, make
 3. Gtk+3.22
+4. autotools
 
 ### Installation
 
 1. Click 'Clone or Download' button, Click 'Download ZIP' in the small dialog.
 2. Extract the zip file.
 3. Open terminal and change its current directory to the extracted zip file.
-4. type 'make'.
-5. type './mooned' then you can run mooned.
+4. type 'autoreconf --install'.
+5. type './configure'.
+6. type 'make'.
+7. type 'make install' as root user.
+8. If you want to uninstall mooned, type 'make uninstall' as root user.
 
 ### licence
 
@@ -42,17 +46,21 @@ moonedはGTK+3を使ったシンプルなエディタです。
 
 ### 動作条件
 
-1. Linuxオペレーティングシステム
+1. Linuxオペレーティングシステム（Gnomeデスクトップ環境）
 2. gcc, make
 3. Gtk+3.22
+4. autotools
 
 ### インストール
 
 1. 'Clone or Download'ボタンをクリックし、現れた小さなダイアログの'Download ZIP'をクリックする
 2. ダウンロードしたZipファイルを解凍する
 3. 端末を起動し、カレントディレクトリを解凍したZipファイルに移動する
-4. makeとタイプする
-5. ./moonedとタイプするとmoonedを起動することができます
+4. 「autoreconf --install」とタイプする
+5. 「./configure」とタイプする
+6. 「make」とタイプする
+7. rootユーザになり、「make install」とタイプする
+8. moonedをアンストールしたい場合は、rootユーザになり、「make uninstall」とタイプする
 
 ### ライセンス
 
