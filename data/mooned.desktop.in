@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=MoonEd
+Exec=mooned %F
+Type=Application
+Icon=@datadir@/icons/hicolor/48x48/apps/mooned.png
+Comment=A simple editor
+Categories=Utility;TextEditor;GNOME;GTK;
+MimeType=text/plain
