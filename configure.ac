@@ -3,7 +3,7 @@
 
 AC_PREREQ([2.69])
 AC_INIT([mooned], [0.5], [lxboyjp@gmail.com],,[https://github.com/ToshioCP/mooned])
-AM_INIT_AUTOMAKE([-Wall -Wno-portability -Werror foreign])
+AM_INIT_AUTOMAKE([-Wall -Werror foreign])
 
 AC_CONFIG_SRCDIR([src/moonedwin.h])
 AC_CONFIG_HEADERS([config.h])
