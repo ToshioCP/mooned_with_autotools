@@ -5,11 +5,12 @@ nodist_mooned_SOURCES = $(BUILT_SOURCES)
 
 BUILT_SOURCES = resources.c
 
-## configure.ac内のPKG_CHECK_MODULESでGTK用のGTK_CFLAGSとGTK_LIBSを生成済み
-## すべてのCソースのコンパイルで使うのでAM_CFLAGS、AM_LDFLAGSに代入
+## configure.ac内のPKG_CHECK_MODULESでGTK用のGTK_CFLAGSとGTK_LIBSを生成済み（PKG_CHECK_MODULESはautoconfやautomakeのマニュアルには記載されていない）
+## すべてのCソースのコンパイルで使うのでAM_CFLAGSにGTK_CFLAGSを代入
 ## なお、個々のソースにのみ適用する場合は、moonedapp_CFLAGSの様に、（ソース名）_CFLAGSなどとする
+## 更に、LDADDにGTK_LIBSを代入
 AM_CFLAGS = $(GTK_CFLAGS)
-AM_LDFLAGS = $(GTK_LIBS)
+LDADD = $(GTK_LIBS)
 
 ## mooned.gresource.xmlの記述からリソースの元ファイル(現時点ではmenu.uiとmoonedwin.ui)を拾い出してくる。
 RESOURCES != $(GLIB_COMPILE_RESOURCES) --sourcedir=$(srcdir) --generate-dependencies $(srcdir)/mooned.gresource.xml
